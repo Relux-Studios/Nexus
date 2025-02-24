@@ -10,37 +10,67 @@
             padding: 0;
             background: url('background.png') no-repeat center center fixed;
             background-size: cover;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: white;
-            text-align: center;
-        }
-        .container {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 80%;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
         }
         .logo {
             max-width: 150px;
-            position: fixed;
+            position: absolute;
             left: 5%;
             top: 50%;
             transform: translateY(-50%);
         }
-        .content {
-            flex-grow: 1;
-            padding-left: 180px;
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 90%;
+            width: 600px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .content h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.5;
         }
         .widget {
             margin-top: 20px;
         }
+        @media (max-width: 768px) {
+            .logo {
+                left: 50%;
+                top: 10%;
+                transform: translateX(-50%);
+                max-width: 120px;
+            }
+            .container {
+                width: 90%;
+                padding: 20px;
+                margin-top: 80px;
+            }
+            .content h1 {
+                font-size: 1.5em;
+            }
+            .content p {
+                font-size: 1em;
+            }
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <img src="logo.png" alt="Nexus Logo" class="logo">
